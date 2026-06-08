@@ -1,0 +1,101 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+.text-logo {
+    color: rgb(109, 106, 106);
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #00000060;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav li {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+nav li:hover {
+    color: #746408;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+
+header {
+    position: relative;       
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.text-container {
+    position: absolute;     
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.head-title {
+    color: rgb(200, 200, 200);
+    font-size: 24px;
+}
+
+.text-wonderland {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.text-organize {
+    color: rgb(200, 200, 200);
+    font-size: 18px;
+}
