@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +14,7 @@ li {
     list-style: none;
 }
 
+/* ── NAVBAR ── */
 .text-logo {
     color: rgb(109, 106, 106);
 }
@@ -45,15 +45,112 @@ nav li:hover {
     cursor: pointer;
 }
 
-@media (max-width: 720px) {
-    nav {
-        flex-direction: column;
-    }
+/* ── NAV RIGHT ── */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── LOGIN / SIGNUP ── */
+.btn-login {
+    padding: 8px 20px;
+    border: 2px solid #746408;
+    background: transparent;
+    color: #746408;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #0c743e;
+    color: white;
+}
+
+.btn-signup {
+    padding: 8px 20px;
+    border: none;
+    background: #0c743e;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-signup:hover {
+    background: #5a4f06;
+}
+
+/* ── LANGUAGE DROPDOWN ── */
+.language-dropdown {
+    position: relative;
+}
+
+.lang-btn {
+    padding: 8px 14px;
+    border: none;      
+    background: transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 
+.lang-btn:hover {
+    border-color: #746408;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px #00000020;
+    min-width: 100px;
+    z-index: 100;
+}
+
+.lang-menu li {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lang-menu li:hover {
+    background: #f5f5f5;
+    color: #746408;
+}
+
+.language-dropdown:hover .lang-menu {
+    display: block;
+}
+
+/* ── MEDIA ── */
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ── HEADER ── */
 header {
-    position: relative;       
+    position: relative;
     width: 100%;
     height: 100vh;
 }
@@ -70,9 +167,9 @@ header {
     object-fit: cover;
 }
 
-
+/* ── TEXT ── */
 .text-container {
-    position: absolute;     
+    position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -85,7 +182,7 @@ header {
 }
 
 .head-title {
-    color: rgb(200, 200, 200);
+    color: rgb(239, 239, 239);
     font-size: 24px;
 }
 
@@ -96,6 +193,6 @@ header {
 }
 
 .text-organize {
-    color: rgb(200, 200, 200);
+    color: rgb(239, 239, 239);
     font-size: 18px;
 }
